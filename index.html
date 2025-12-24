@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For My Vava 🎄</title>
+<title>For My Love 🎄</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-/* ===== BASE ===== */
 body{
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Segoe UI', sans-serif;
   background: linear-gradient(180deg,#020024,#090979,#000814,#03045e);
   color:white;
   text-align:center;
@@ -22,20 +21,35 @@ section{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  animation: fade 2s;
 }
 
-@keyframes fade{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
+h1,h2{
+  margin-bottom:15px;
 }
 
-h1,h2,h3{ margin-bottom:15px; }
-p{ max-width:520px; margin:auto; line-height:1.8; }
+p{
+  max-width:520px;
+  margin:auto;
+  line-height:1.9;
+  font-size:17px;
+}
 
-/* ===== BUTTON ===== */
+.name{
+  color:#ffd60a;
+  font-weight:600;
+  transition:opacity 0.5s;
+}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:#ffd60a;
+  margin:30px auto;
+  border-radius:10px;
+}
+
 button{
-  margin-top:25px;
+  margin-top:30px;
   padding:14px 30px;
   border:none;
   border-radius:30px;
@@ -45,7 +59,6 @@ button{
   cursor:pointer;
 }
 
-/* ===== SECRET ===== */
 .box{
   display:none;
   margin-top:25px;
@@ -54,16 +67,6 @@ button{
   border-radius:15px;
 }
 
-/* ===== DIVIDER ===== */
-.divider{
-  margin:40px auto;
-  width:60px;
-  height:3px;
-  background:#ffd60a;
-  border-radius:10px;
-}
-
-/* ===== SNOW ===== */
 .snow{
   position:fixed;
   top:-10px;
@@ -76,7 +79,6 @@ button{
   to{ transform:translateY(120vh); }
 }
 
-/* ===== FOOTER ===== */
 footer{
   padding:40px;
   font-size:14px;
@@ -89,26 +91,26 @@ footer{
 
 <!-- 🎄 INTRO -->
 <section>
-  <h1>🎄 Merry Christmas Vava 🌙</h1>
+  <h1>🎄 Merry Christmas <span id="name" class="name">Wifey 💍</span></h1>
   <div class="divider"></div>
   <p>
-    This page is a little Christmas world  
-    built from my thoughts,  
-    my feelings,  
-    and everything I can’t always say out loud ✨
+    This page is a small Christmas world  
+    made only for you.  
+    Slow down, scroll gently,  
+    and feel how deeply you’re loved ✨
   </p>
 </section>
 
-<!-- 🌙 NIGHT VIBE -->
+<!-- 🌙 NIGHT -->
 <section>
   <h2>For Quiet Nights 🌙</h2>
   <div class="divider"></div>
   <p>
-    If you’re reading this late at night,  
-    when the world is quiet,  
-    I hope this page feels like a warm blanket  
-    and a soft reminder  
-    that you’re deeply cared for 🤍
+    If you’re reading this at night,  
+    I hope it feels calm.  
+    Like a soft reminder  
+    that someone out there  
+    is thinking about you.
   </p>
 </section>
 
@@ -117,93 +119,66 @@ footer{
   <h2>Why It’s You ❤️</h2>
   <div class="divider"></div>
   <p>
-    I didn’t choose you because I had to.  
-    I chose you because my heart felt calm with you.  
-    Because being with you feels natural,  
-    easy,  
-    and safe.
+    I didn’t choose you loudly.  
+    I chose you gently.  
+    In the way my heart feels safe  
+    whenever I think of  
+    <span class="name" id="name2">Wifey 💍</span>.
   </p>
 </section>
 
-<!-- 🎁 CHRISTMAS WISH -->
+<!-- 🎁 WISH -->
 <section>
   <h2>My Christmas Wish 🎁</h2>
   <div class="divider"></div>
   <p>
-    This Christmas,  
-    I don’t wish for lights or gifts.  
-    I wish for more moments where we laugh,  
-    more moments where time slows down,  
-    and more memories that feel like this.
+    I don’t wish for gifts.  
+    I wish for time.  
+    Time with you.  
+    Time where everything feels easy,  
+    and we’re just us.
   </p>
 </section>
 
-<!-- 💫 LITTLE MOMENTS -->
+<!-- 💫 LITTLE -->
 <section>
   <h2>The Little Things 💫</h2>
   <div class="divider"></div>
   <p>
-    It’s the small moments that stay with me —  
-    the way you exist,  
+    It’s not the big moments.  
+    It’s the small ones.  
+    The way you exist,  
     the way you feel familiar,  
-    the way you make things feel okay  
-    even when they aren’t.
+    the way you feel like home.
   </p>
 </section>
 
 <!-- 🔐 SECRET -->
 <section>
-  <h2>A Secret Just for You 🤍</h2>
-  <button onclick="openBox('s1')">Tap gently</button>
-  <div id="s1" class="box">
+  <h2>A Little Secret 🤍</h2>
+  <button onclick="openBox()">Tap gently</button>
+  <div id="secret" class="box">
     <p>
-      My Vava 🌙  
-      You don’t even realize how special you are to me.  
+      My <span class="name" id="name3">Wifey 💍</span>,  
+      you don’t even realize  
+      how special you are to me.  
       You feel like home —  
-      and I never want to lose that feeling. 💖
+      and I never want to lose that feeling.
     </p>
   </div>
-</section>
-
-<!-- 🎄 ANOTHER SECRET -->
-<section>
-  <h2>One More Thing… 🎄</h2>
-  <button onclick="openBox('s2')">Open slowly</button>
-  <div id="s2" class="box">
-    <p>
-      No matter how busy life gets,  
-      no matter how loud the world becomes,  
-      there will always be a quiet place in my heart  
-      that belongs to you.
-    </p>
-  </div>
-</section>
-
-<!-- 🕯️ PROMISE -->
-<section>
-  <h2>A Soft Promise 🕯️</h2>
-  <div class="divider"></div>
-  <p>
-    I promise patience.  
-    I promise care.  
-    I promise choosing you,  
-    even on ordinary days.
-  </p>
 </section>
 
 <!-- ❤️ FOREVER -->
 <section>
   <h2>Always You 🎄</h2>
-  <button onclick="window.location.href='forever.html'">
-  ➜ One More Page 🤍
-  </button>
   <div class="divider"></div>
   <p>
     Seasons will change.  
     Years will pass.  
     But if I had to choose again,  
-    it would still be you.  
-    Every time. ❤️
+    it would still be  
+    <span class="name" id="name4">Wifey 💍</span>.  
+    Every time ❤️
   </p>
 </section>
 
@@ -212,12 +187,28 @@ footer{
 </footer>
 
 <script>
-function openBox(id){
-  document.getElementById(id).style.display="block";
+/* Name switch */
+const names = ["Wifey 💍", "Muthew 🌙", "Moluuy 🧸"];
+let i = 0;
+
+setInterval(() => {
+  document.querySelectorAll("#name, #name2, #name3, #name4").forEach(el => {
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.textContent = names[i];
+      el.style.opacity = 1;
+    }, 300);
+  });
+  i = (i + 1) % names.length;
+}, 2500);
+
+/* Secret box */
+function openBox(){
+  document.getElementById("secret").style.display = "block";
 }
 
 /* Snow */
-for(let i=0;i<50;i++){
+for(let s=0;s<45;s++){
   let snow=document.createElement("div");
   snow.className="snow";
   snow.innerHTML="❄";
